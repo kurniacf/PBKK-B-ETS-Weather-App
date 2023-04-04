@@ -24,4 +24,22 @@ Rancangan yang saya buat adalah Aplikasi Web dengan menggunakan framework .NET d
 
 Link Github: https://github.com/kurniacf/PBKK-B-ETS-Weather-App
 
+## Dokumentasi Pengerjaan
+- Project Weather App di Visual Studio Code </br>
+<img src="https://user-images.githubusercontent.com/70510279/229690364-f2d70ca8-1048-40c6-88fe-505175eeeffc.png" width="700"/>
 
+- Running Project Weather App </br>
+<img src="https://user-images.githubusercontent.com/70510279/229690107-cf888e09-92f8-4bd0-8039-18527c5eb5f4.png" width="700"/>
+
+## Hasil 
+- Tampilan Awal dan Section Berita Terkini </br>
+<img src="https://user-images.githubusercontent.com/70510279/229691225-55dfa130-2842-468b-8ea3-6686d097e817.png" width="700"/>
+
+- Section Prakiraan Cuaca </br>
+<img src="https://user-images.githubusercontent.com/70510279/229691254-94e58bd9-8088-4f43-a011-f36e11ab1637.png" width="700"/>
+
+- Section Prakiraan Cuaca - Hasil Pencarian dengan keyword 'Surabaya, Indonesia' </br>
+<img src="https://user-images.githubusercontent.com/70510279/229691295-eeb26a43-a10c-45a1-87ef-8b621752bef1.png" width="700"/>
+
+- Hasil Pencarian dengan keyword 'Surabaya' </br>
+<img src="https://user-images.githubusercontent.com/70510279/229691314-e3e9d386-5a6a-473b-9497-0de0c89bcf88.png" width="700"/>
