@@ -1,0 +1,38 @@
+﻿@page
+@model Weather_Web.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    .news-image {
+        height: 200px;
+        object-fit: cover;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Weather App</h1>
+    <p>Dapatkan pembaruan dan berita cuaca terbaru dari seluruh dunia.</p>
+
+    <a class="btn btn-primary" href="Weather">Check Weather</a>
+</div>
+
+<div class="container mt-5">
+    <h2>Berita Cuaca dan Lingkungan Terkini</h2>
+    <div class="row">
+        @foreach (var news in Model.WeatherNews)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="@news.ImageUrl" class="card-img-top news-image" alt="@news.Title" />
+                    <div class="card-body">
+                        <h5 class="card-title">@news.Title</h5>
+                        <p class="card-text">@news.Summary</p>
+                        <p class="card-text"><small class="text-muted">@news.Date.ToShortDateString()</small></p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

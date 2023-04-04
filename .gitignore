@@ -1,0 +1,54 @@
+# .gitignore untuk proyek ASP.NET Core Razor Pages
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+logs/
+
+# Visual Studio files
+.vs/
+*.njsproj
+*.sln.ide/
+
+# Visual Studio Code files
+.vscode/
+
+# Paket dependency manager
+.paket/
+paket-files/
+
+# Global.json
+global.json
+
+# User-specific rules
+*.rsuser
+*ReSharper*
+
+# Generated files
+*.g.cs
+*.g.i.cs
+*.g.cshtml
+
+# Runtimes folder
+runtimes/
+
+# Runtime & SDK folders
+**/node_modules/
+
+# appsettings files
+appsettings.json

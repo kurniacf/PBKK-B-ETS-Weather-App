@@ -1,0 +1,146 @@
+@page
+@model WeatherWeb.Pages.WeatherModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App Web</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        .weather-icon {
+            font-size: 2.5rem;
+        }
+
+        .weather-data {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .weather-data .weather-item {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .weather-data .weather-item i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .weather-data .weather-item .weather-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Weather</h1>
+        <form method="post" class="mb-4">
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" class="form-control" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" class="form-control" id="country" name="country" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Weather</button>
+        </form>
+        @if (Model.Temperature != null)
+        {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Current weather in @Model.City, @Model.Country</h5>
+                    <div class="weather-data">
+                        <div class="weather-item">
+                            <i class="fas fa-thermometer-half weather-icon"></i>
+                            <div>
+                                <span class="weather-label">Temperature:</span>
+                                <span>@Model.Temperature</span>
+                            </div>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-cloud weather-icon"></i>
+                            <div>
+                                <span class="weather-label">Weather description:</span>
+                                <span>@Model.WeatherDescription</span>
+                            </div>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-arrow-down weather-icon"></i>
+                            <div>
+                                <span class="weather-label">Minimum temperature:</span>
+                                <span>@Model.TempMin</span>
+                            </div>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-arrow-up weather-icon"></i>
+                            <div>
+                                <span class="weather-label">Maximum temperature:</span>
+                                <span>@Model.TempMax</span>
+                            </div>
+                        </div>
+                                                <div class="weather-item">
+                            <i class="fas fa-tint weather-icon"></i>
+                            <div>
+                                <span class="weather-label">Humidity:</span>
+                                <span>@Model.Humidity</span>
+                            </div>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-tachometer-alt weather-icon"></i>
+                            <div>
+                                <span class="weather-label">Pressure:</span>
+                                <span>@Model.Pressure</span>
+                            </div>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-wind weather-icon"></i>
+                            <div>
+                                <span class="weather-label">Wind speed:</span>
+                                <span>@Model.WindSpeed</span>
+                            </div>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-location-arrow weather-icon"></i>
+                            <div>
+                                <span class="weather-label">Wind direction:</span>
+                                <span>@Model.WindDirection</span>
+                            </div>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-eye weather-icon"></i>
+                            <div>
+                                <span class="weather-label">Visibility:</span>
+                                <span>@Model.Visibility</span>
+                            </div>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-sun weather-icon"></i>
+                            <div>
+                                <span class="weather-label">Sunrise:</span>
+                                <span>@Model.Sunrise</span>
+                            </div>
+                        </div>
+                        <div class="weather-item">
+                            <i class="fas fa-moon weather-icon"></i>
+                            <div>
+                                <span class="weather-label">Sunset:</span>
+                                <span>@Model.Sunset</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>
+
